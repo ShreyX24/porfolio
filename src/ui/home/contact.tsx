@@ -1,4 +1,3 @@
-import React from "react";
 import { useColor } from "../../context/colorProvider";
 import { Header } from "../../components/common/header";
 import { ContactForm } from "../../components/contact/contactForm";

@@ -7,11 +7,11 @@ import { useColor } from "../../context/colorProvider";
 import { workExpDesk, workExpMob } from "../../lib/workExp";
 
 export const VertScroll = () => {
-  const { isMobile } = useColor();
+  const { colors, isMobile } = useColor();
   return (
     <>
       {isMobile ? (
-        <VerticalTimeline lineColor="#fff">
+        <VerticalTimeline lineColor={colors.primary}>
           {workExpMob.map((item, index) => (
             <VerticalTimelineElement
               key={index}
@@ -47,26 +47,27 @@ export const VertScroll = () => {
           ))}
         </VerticalTimeline>
       ) : (
-        <VerticalTimeline lineColor="#fff">
+        <VerticalTimeline lineColor={colors.primary}>
           {workExpDesk.map((item, index) => (
             <VerticalTimelineElement
               key={index}
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: `${item.cardBgColor}`,
+                background: `${colors.primary}`,
                 color: `${item.cardTextColor}`,
               }}
               contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
+                borderRight: `7px solid ${colors.primary}`,
               }}
               date={`${item.date}`}
               dateClassName="text-white"
               iconStyle={{
-                background: `${item.iconBgColor}`,
-                color: "#fff",
+                background: `${colors.primary}`,
+                color: "#000",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderColor: `${colors.primary}`,
               }}
               icon={
                 <img

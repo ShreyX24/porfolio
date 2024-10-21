@@ -4,6 +4,7 @@ import { useSmoothScroll } from "../../hooks/smoothScroll";
 import { scroller } from "../../lib/scrollerbar";
 import { ScrollerBarProps } from "../../types/types";
 import { color } from "framer-motion";
+import { PopFromRight } from "../../animations/popFromRight";
 
 export const ScrollerBar = ({ activeSection }: ScrollerBarProps) => {
   const [translateValueX, setTranslateValueX] = useState("");
@@ -80,7 +81,10 @@ export const ScrollerBar = ({ activeSection }: ScrollerBarProps) => {
     <div className="w-screen bottom-0 fixed md:w-[40px] md:h-screen md:top-0 md:right-[40px] md:flex md:items-center md:justify-center z-50">
       <div
         className="flex flex-col items-center justify-center py-3 px-2 gap-2 md:rounded-full md:py-6 md:flex-row border-[2px]"
-        style={{ backgroundColor: colors.secondary, borderColor: colors.primary }}
+        style={{
+          backgroundColor: colors.secondary,
+          borderColor: colors.primary,
+        }}
       >
         {/* slider-wrapper */}
         <div className="w-full md:h-full">
@@ -103,19 +107,21 @@ export const ScrollerBar = ({ activeSection }: ScrollerBarProps) => {
               className="w-[18px] h-[18px]"
               onClick={() => scrollToSection(`${item.id}`)}
             >
-              <img
-                src={
-                  item.id === "intro"
-                    ? `/assets/images/${item.img}.jpg`
-                    : `/assets/icons/${item.img}.png`
-                }
-                alt={
-                  item.id === "intro"
-                    ? `/assets/images/${item.img}.jpg`
-                    : `/assets/icons/${item.img}.png`
-                }
-                width="40"
-              />
+              <PopFromRight animdelay={true}>
+                <img
+                  src={
+                    item.id === "intro"
+                      ? `/assets/images/${item.img}.jpg`
+                      : `/assets/icons/${item.img}.png`
+                  }
+                  alt={
+                    item.id === "intro"
+                      ? `/assets/images/${item.img}.jpg`
+                      : `/assets/icons/${item.img}.png`
+                  }
+                  width="40"
+                />
+              </PopFromRight>
             </button>
           ))}
         </div>

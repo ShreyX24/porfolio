@@ -1,3 +1,4 @@
+import { PopUp } from "../../animations/popUp";
 import { useColor } from "../../context/colorProvider";
 
 export const Footer = () => {
@@ -15,10 +16,10 @@ export const Footer = () => {
       }}
     >
       <div className="flex h-full items-end justify-center text-center">
-        <span className="py-4">
-          This site is developed and maintained by <strong>shrey.dev</strong> © {" "}
+        <PopUp className="py-2">
+          This site is developed and maintained by <strong>shrey.dev</strong> ©{" "}
           {year}
-        </span>
+        </PopUp>
       </div>
     </div>
   );

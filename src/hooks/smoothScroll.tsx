@@ -6,6 +6,7 @@ export const useSmoothScroll = () => {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth'
+        
       });
     }
   }, []);

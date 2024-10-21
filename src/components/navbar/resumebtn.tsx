@@ -9,7 +9,7 @@ export const Resumebtn = () => {
   const { colors, isMobile } = useColor();
 
   const resumeLink =
-    "https://drive.google.com/file/d/1cWhcCuoN-ELJcajviTYbNo0dK--8PQHq/view?usp=drive_link";
+    "https://drive.google.com/file/d/1WV_9-OMQdl0Oa9fLeArouEeL6QFe7s-H/view?usp=sharing";
 
 
   return (

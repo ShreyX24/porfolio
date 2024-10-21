@@ -17,7 +17,7 @@ export const Contact = () => {
         backgroundColor: colors.secondary,
       }}
     >
-      <div className="flex flex-col h-full items-center justify-evenly">
+      <div className="flex flex-col h-full items-center justify-evenly md:gap-20">
         {/* Header */}
         <Header
           title="Let's Talk"
@@ -34,7 +34,7 @@ export const Contact = () => {
           className="flex flex-col items-center justify-center text-center gap-[100px] md:flex-row"
           style={{
             color: colors.primary,
-            height: isMobile ? "70%" : "auto",
+            height: isMobile ? "70%" : "350px",
             width: isMobile ? "100%" : "70%",
           }}
         >

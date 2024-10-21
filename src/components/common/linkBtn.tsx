@@ -22,7 +22,7 @@ export const LinkBtn: React.FC<LinkBtnProps> = ({
     >
       <Button
       type={type}
-        className="flex flex-row-reverse items-center gap-2 px-6"
+        className="flex flex-row-reverse items-center gap-2 px-6 font-semibold"
         placeholder={placeholder}
         src={`/assets/icons/${src}.png`}
         src_w={src_w}

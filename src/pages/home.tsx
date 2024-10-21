@@ -11,6 +11,7 @@ import { ScrollerBar } from "../ui/home/scrollerBar";
 import { TechStack } from "../ui/home/techStack";
 import { Timeline } from "../ui/home/timeline";
 import { Footer } from "../ui/home/footer";
+import { PreventMobileView } from "../ui/home/preventMobileView";
 
 export const Home: React.FC = () => {
   const activeSection = useActiveSection(scroller.map((item) => item.id));
@@ -29,13 +30,15 @@ export const Home: React.FC = () => {
 
       <Timeline />
 
-      <Hobbies />
+      {/* <Hobbies /> */}
 
       <Contact />
 
       <Footer />
 
       <ScrollerBar activeSection={activeSection} />
+
+      <PreventMobileView />
     </div>
   );
 };

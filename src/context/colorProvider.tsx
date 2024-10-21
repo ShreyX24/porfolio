@@ -37,6 +37,7 @@ export const ColorProvider = ({ children }: ColorProviderProps) => {
     primary: "#fff3b0", // Cream
     secondary: "#0f4c5c", // Dark Blue
     tertiary: "#FF9400", // Orange
+    error: "#ff0000", //red
 
     logoDotColor1: "#5C1F0F", //purple
     logoDotColor2: "#00CCDD", //cyan

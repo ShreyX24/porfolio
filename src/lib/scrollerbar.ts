@@ -20,10 +20,10 @@ export const scroller = [
         id: "timeline",
         img: "timeline_light"
     },
-    {
-        id: "hobbies",
-        img: "drone_light"
-    },
+    // {
+    //     id: "hobbies",
+    //     img: "drone_light"
+    // },
     {
         id: "contact",
         img: "talk_light"

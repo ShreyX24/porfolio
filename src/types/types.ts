@@ -5,6 +5,7 @@ export type ColorContextPropsType = {
         primary: string;
         secondary: string;
         tertiary: string;
+        error: string;
         logoDotColor1: string;
         logoDotColor2: string;
     };
@@ -107,4 +108,4 @@ export interface ProjectCompProps {
 
 export interface ScrollerBarProps {
     activeSection: string | null;
-  }
+}

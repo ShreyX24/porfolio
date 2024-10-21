@@ -51,11 +51,11 @@ export const About = () => {
 
           {/* link */}
 
-          <LinkBtn
+          {/* <LinkBtn
             placeholder="More About Me"
             src={isMobile ? "arrow-right2" : "arrow-right2_light"}
             color={isMobile ? "blue" : "cream"}
-          />
+          /> */}
         </div>
       </div>
     </div>

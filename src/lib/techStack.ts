@@ -6,6 +6,10 @@ export const techStack: btnLib2[] = [
         img: "react"
     },
     {
+        name: "Next.js",
+        img: "nextjs"
+    },
+    {
         name: "JavaScript",
         img: "javascript"
     },

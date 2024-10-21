@@ -61,13 +61,13 @@ export const Projects = () => {
           </div>
 
           {/* Link to some extra projects */}
-          <div>
+          {/* <div>
             <LinkBtn
               placeholder="More on Projects"
               src={isMobile ? "arrow-right2" : "arrow-right2_light"}
               color={isMobile ? "blue" : "cream"}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

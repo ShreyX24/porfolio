@@ -7,6 +7,7 @@ import { Occupation } from "../../components/intro/occupation";
 import { LinkBtn } from "../../components/common/linkBtn";
 import { BgDecorR } from "../../components/common/bgDecorR";
 import { useSmoothScroll } from "../../hooks/smoothScroll";
+import { ContactLinks } from "../../components/common/contactLinks";
 
 export const Intro = () => {
   const { colors, isMobile } = useColor();
@@ -29,24 +30,28 @@ export const Intro = () => {
 
       <div className="w-full h-full flex flex-col items-center justify-center md:flex-row">
         <div
-          className="flex flex-col items-center justify-center gap-10"
+          className="flex flex-col items-center justify-center gap-10 "
           style={{
             color: isMobile ? colors.primary : colors.secondary,
-            height: isMobile ? "470px" : "auto",
-            width: isMobile ? "auto" : "33%",
+            height: isMobile ? "470px" : "90%",
+            width: isMobile ? "auto" : "32%",
           }}
         >
-          {/* profile picture */}
-          <Picture />
+          <div className="flex flex-col items-center justify-center gap-5 h-full">
+            {/* profile picture */}
+            <Picture />
 
-          {/* Contact link btn */}
+            {/* Contact link btn */}
 
-          <LinkBtn
-            placeholder="Lets Talk"
-            src={isMobile ? "arrow-right2_light" : "arrow-right2"}
-            color={isMobile ? "cream" : "blue"}
-            onclick={() => scrollToSection("contact")}
-          />
+            <LinkBtn
+              placeholder="Lets Talk"
+              src={isMobile ? "arrow-right2_light" : "arrow-right2"}
+              color={isMobile ? "cream" : "blue"}
+              onclick={() => scrollToSection("contact")}
+            />
+          </div>
+
+          <ContactLinks />
         </div>
 
         {/* text layout */}

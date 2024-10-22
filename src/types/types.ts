@@ -24,6 +24,8 @@ export interface ImgProps {
 
 export interface ButtonProps {
     onclick?: () => void;
+    onMouseOver?: () => void;
+    onMouseOut?: () => void;
     placeholder: string;
     className?: string;
     src?: string

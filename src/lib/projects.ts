@@ -1,7 +1,7 @@
 export const projects = [
     {
         appName: "Eaterio",
-        appImg: "eatario",
+        appImg: "Eatario",
         desc: "Eatario is my first full-stack food ordering app, built with React and Tailwind CSS on the frontend, Express.js and Prisma ORM on the backend, and powered by a Dockerized PostgreSQL database for efficient data management and scalability.",
         liveLink: "https://eatario.vercel.app/",
         gitLink: "https://github.com/ShreyX24/Eatario",

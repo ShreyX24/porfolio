@@ -53,7 +53,7 @@ body {
   font-family: "Protest Strike", serif;
 }
 
-/* From Uiverse.io by alexruix */ 
+/* From Uiverse.io by alexruix */
 .loader {
   width: 7px;
   height: 30px;
@@ -68,7 +68,7 @@ body {
 
 .loader::after,
 .loader::before {
-  content: '';
+  content: "";
   width: 7px;
   height: 30px;
   border-radius: 4px;
@@ -92,5 +92,52 @@ body {
 
   100% {
     height: 4px;
+  }
+}
+
+#successO {
+  animation: enlarge-shrinkO 2s ease-in-out forwards,
+    rotateO 2s linear 2s infinite; /* Change to '2s' to cover both enlarge and shrink */
+}
+#successI {
+  animation: enlarge-shrinkI 2s ease-in-out forwards; /* Change to '2s' to cover both enlarge and shrink */
+}
+
+
+
+@keyframes enlarge-shrinkO {
+  0% {
+    width: 0; /* Start from 0 width */
+  }
+
+  50% {
+    width: 100px; /* Enlarge to 100px */
+  }
+
+  100% {
+    width: 40px; /* Shrink back to 0 */
+  }
+}
+
+@keyframes enlarge-shrinkI {
+  0% {
+    width: 0; /* Start from 0 width */
+  }
+
+  50% {
+    width: 40px; /* Enlarge to 100px */
+  }
+
+  100% {
+    width: 14px; /* Shrink back to 0 */
+  }
+}
+
+@keyframes rotateO {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

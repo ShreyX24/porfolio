@@ -17,6 +17,7 @@ export type ColorProviderProps = {
 };
 
 export interface ImgProps {
+    id?: string
     src?: string;
     w?: string | number;
     className?: string;

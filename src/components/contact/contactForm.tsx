@@ -3,6 +3,7 @@ import { useColor } from "../../context/colorProvider";
 import { LinkBtn } from "../common/linkBtn";
 import emailjs from "@emailjs/browser";
 import { Slide } from "../../animations/slide";
+import { Img } from "../common/img";
 
 export const ContactForm = () => {
   const { colors, isMobile } = useColor();
@@ -16,6 +17,15 @@ export const ContactForm = () => {
     email: { value: "", hasError: false },
     message: { value: "", hasError: false },
   });
+
+  // Add a function to reset form fields
+  const resetForm = () => {
+    setFormFields({
+      name: { value: "", hasError: false },
+      email: { value: "", hasError: false },
+      message: { value: "", hasError: false },
+    });
+  };
 
   const handleSubmitForm = async (e: FormEvent) => {
     e.preventDefault();
@@ -59,11 +69,14 @@ export const ContactForm = () => {
           "mkXxfeOZPT5A15D7Y"
         );
         setFormState("success");
-        setTimeout(() => setFormState("idle"), 3000); // Reset form after 3 seconds
+        resetForm(); // Reset form fields after successful submission
+        setTimeout(() => {
+          setFormState("idle");
+        }, 3000);
       } catch (error) {
         console.error("FAILED...", error);
         setFormState("error");
-        setTimeout(() => setFormState("idle"), 3000); // Reset form after 3 seconds
+        setTimeout(() => setFormState("idle"), 3000);
       }
     }
   };
@@ -79,7 +92,11 @@ export const ContactForm = () => {
   if (formState === "success") {
     return (
       <div className="flex flex-col items-center justify-center h-full">
-        <div className="text-4xl mb-4">✅</div>
+        <div className="mb-4 flex items-center justify-center">
+          <Img id="successO" src="/assets/icons/done1.png"  />
+          <Img id="successI" src="/assets/icons/done2.png" className="absolute" />
+
+        </div>
         <p className="text-xl font-semibold">Message sent successfully!</p>
         <p>I will contact you over mail ASAP</p>
       </div>

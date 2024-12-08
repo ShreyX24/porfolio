@@ -13,11 +13,11 @@ export const projects = [
         liveLink: "https://wilt-coral.vercel.app/",
         gitLink: "https://github.com/ShreyX24/WILT",
     },
-    // {
-    //     appName: "Intel Dashboard",
-    //     appImg: "intlDash",
-    //     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    //     liveLink: "",
-    //     gitLink: "",
-    // }
+    {
+        appName: "Netflix Clone",
+        appImg: "netflix-clone-snapshot",
+        desc: "The Netflix Clone is a full-stack streaming platform, built with React and TypeScript for a dynamic and type-safe frontend. It leverages Redux for state management and Apollo Client for efficient GraphQL integration. The backend, powered by Express.js and GraphQL, ensures seamless data handling and robust querying capabilities.",
+        liveLink: "",
+        gitLink: "",
+    }
 ]

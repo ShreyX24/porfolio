@@ -17,7 +17,7 @@ export const projects = [
         appName: "Netflix Clone",
         appImg: "netflix-clone-snapshot",
         desc: "The Netflix Clone is a full-stack streaming platform, built with React and TypeScript for a dynamic and type-safe frontend. It leverages Redux for state management and Apollo Client for efficient GraphQL integration. The backend, powered by Express.js and GraphQL, ensures seamless data handling and robust querying capabilities.",
-        liveLink: "",
-        gitLink: "",
+        liveLink: "https://netflix-clone-git-main-dreadeyes-projects.vercel.app/",
+        gitLink: "https://github.com/ShreyX24/netflix-clone",
     }
 ]

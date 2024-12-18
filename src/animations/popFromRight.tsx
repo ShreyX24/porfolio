@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { PopUpProps } from "../types/types";
 import { motion, useInView, useAnimation } from "framer-motion";
 

@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { TypewriterProps } from "../../types/types";
 import { Slide } from "../../animations/slide";
+
+interface TypewriterProps {
+  dataType: string[];
+  dataPeriod: number;
+}
 
 export const Typewriter: React.FC<TypewriterProps> = ({
   dataType,

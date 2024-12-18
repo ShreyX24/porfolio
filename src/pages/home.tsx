@@ -1,44 +1,45 @@
 import React from "react";
+import { Navbar } from "../ui/navbar";
+import { Intro } from "../ui/intro";
+import { About } from "../ui/about";
+import { TechStack } from "../ui/techStack";
+import { Projects } from "../ui/projects";
+import { Timeline } from "../ui/timeline";
+import { Contact } from "../ui/contact";
+import { Footer } from "../ui/footer";
+import { ScrollerBar } from "../ui/scrollerBar";
 import { useActiveSection } from "../hooks/activeComp";
 import { scroller } from "../lib/scrollerbar";
-import { About } from "../ui/home/about";
-import { Contact } from "../ui/home/contact";
-import { Hobbies } from "../ui/home/hobbies";
-import { Intro } from "../ui/home/intro";
-import { Navbar } from "../ui/home/navbar";
-import { Projects } from "../ui/home/projects";
-import { ScrollerBar } from "../ui/home/scrollerBar";
-import { TechStack } from "../ui/home/techStack";
-import { Timeline } from "../ui/home/timeline";
-import { Footer } from "../ui/home/footer";
-import { PreventMobileView } from "../ui/home/preventMobileView";
 
 export const Home: React.FC = () => {
   const activeSection = useActiveSection(scroller.map((item) => item.id));
 
   return (
-    <div className="w-screen h-screen">
-      <Navbar />
+    <div className="w-screen min-h-screen flex flex-col">
+      <Navbar mobHeight={70} deskHeight={120} />
 
-      <Intro />
+      <Intro
+        mobHeight={100}
+        deskHeight={900}
+        occupation_title="Full Stack Developer"
+      />
 
-      <About />
+      <About deskHeight={500} mobHeight={100} />
 
-      <TechStack />
+      <TechStack deskHeight={500} mobHeight={120} />
 
-      <Projects />
+      <Projects deskHeight={1000} mobHeight={250} />
 
-      <Timeline />
+      <Timeline deskHeight={1800} mobHeight={150} />
 
-      {/* <Hobbies /> */}
+      <Contact deskHeight={500} mobHeight={100} />
 
-      <Contact />
-
-      <Footer />
+      <Footer deskHeight={200} mobHeight={40} />
 
       <ScrollerBar activeSection={activeSection} />
 
-      <PreventMobileView />
+      {/* <Hobbies /> */}
+      {/* <PreventMobileView /> */}
     </div>
   );
 };

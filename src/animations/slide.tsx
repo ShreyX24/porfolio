@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { PopUpProps } from "../types/types";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useColor } from "../context/colorProvider";
@@ -57,7 +57,7 @@ export const Slide = ({
           bottom: 4,
           left: 0,
           right: 0,
-          background: isMobile ? colors.secondary : colors.primary,
+          background: isMobile ? colors.blue : colors.cream,
           zIndex: 40,
         }}
       ></motion.div>

@@ -7,7 +7,7 @@ export const Navbtns = () => {
   return (
     <>
       {/* Visible only in desktop */}
-      <div className="hidden md:w-1/3 md:flex md:items-center md:justify-center md:gap-10 z-10">
+      <div className="hidden md:w-2/3 md:flex md:items-center md:justify-center md:gap-10 z-10">
         {navBtns.map((item, index) => (
           <Button
             key={index}

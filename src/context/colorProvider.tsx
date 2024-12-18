@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { ColorContextPropsType, ColorProviderProps } from "../types/types";
+import { ControlCenter } from "../controlCenter/cc";
 
 const ColorContext = createContext<ColorContextPropsType | undefined>(
   undefined
@@ -34,13 +35,13 @@ export const ColorProvider = ({ children }: ColorProviderProps) => {
 
   // Define the initial colors
   const colors = {
-    primary: "#fff3b0", // Cream
-    secondary: "#0f4c5c", // Dark Blue
-    tertiary: "#FF9400", // Orange
-    error: "#ff0000", //red
+    cream: ControlCenter.colors.cream, // Cream
+    blue: ControlCenter.colors.blue, // Dark Blue
+    orange: ControlCenter.colors.orange, // Orange
+    red: ControlCenter.colors.red, //red
 
-    logoDotColor1: "#5C1F0F", //purple
-    logoDotColor2: "#00CCDD", //cyan
+    purple: ControlCenter.colors.purple, //purple
+    cyan: ControlCenter.colors.cyan, //cyan
   };
 
   const values = { colors, isMobile };

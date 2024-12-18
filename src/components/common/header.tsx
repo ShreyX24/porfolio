@@ -1,5 +1,11 @@
-import { HeaderProps } from "../../types/types";
 import { Img } from "./img";
+
+interface HeaderProps {
+  title: string;
+  src: string;
+  w?: string;
+  style?: React.CSSProperties;
+}
 
 export const Header: React.FC<HeaderProps> = ({ title, src, w, style }) => {
   return (

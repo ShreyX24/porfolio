@@ -1,6 +1,9 @@
-import { btnLib2 } from "../types/types"
+interface btnLib {
+    name: string;
+    img: string;
+}
 
-export const techStack: btnLib2[] = [
+export const techStack: btnLib[] = [
     {
         name: "React",
         img: "react"
@@ -59,7 +62,7 @@ export const techStack: btnLib2[] = [
     },
 ]
 
-export const toolStack: btnLib2[] = [
+export const toolStack: btnLib[] = [
     {
         name: "Git",
         img: "git"
@@ -78,7 +81,7 @@ export const toolStack: btnLib2[] = [
     }
 ]
 
-export const otherStack: btnLib2[] = [
+export const otherStack: btnLib[] = [
     {
         name: "C++",
         img: "cpp"

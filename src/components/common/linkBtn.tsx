@@ -1,7 +1,15 @@
 import React from "react";
 import { Button } from "./button";
 import { useColor } from "../../context/colorProvider";
-import { LinkBtnProps } from "../../types/types";
+
+interface LinkBtnProps {
+  placeholder: string;
+  src: string;
+  src_w?: string;
+  color: "cream" | "blue";
+  type?: "submit" | "button" | "reset" | undefined;
+  onclick?: () => void;
+}
 
 export const LinkBtn: React.FC<LinkBtnProps> = ({
   placeholder,
@@ -16,12 +24,12 @@ export const LinkBtn: React.FC<LinkBtnProps> = ({
     <div
       className="w-fit border-2 z-10 expand"
       style={{
-        color: color === "cream" ? colors.primary : colors.secondary,
-        borderColor: color === "cream" ? colors.primary : colors.secondary,
+        color: color === "cream" ? colors.cream : colors.blue,
+        borderColor: color === "cream" ? colors.cream : colors.blue,
       }}
     >
       <Button
-      type={type}
+        type={type}
         className="flex flex-row-reverse items-center gap-2 px-6 font-semibold"
         placeholder={placeholder}
         src={`/assets/icons/${src}.png`}

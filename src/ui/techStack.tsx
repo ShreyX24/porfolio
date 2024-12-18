@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import { useColor } from "../../context/colorProvider";
-import { BgDecorR } from "../../components/common/bgDecorR";
-import { Header } from "../../components/common/header";
-import { MainStack } from "../../components/techStack/mainStack";
-import { ToolStack } from "../../components/techStack/toolStack";
-import { OtherStack } from "../../components/techStack/otherStack";
-import { LinkBtn } from "../../components/common/linkBtn";
-import { PopUp } from "../../animations/popUp";
+import { useState } from "react";
+import { useColor } from "../context/colorProvider";
+import { Header } from "../components/common/header";
+import { PopUp } from "../animations/popUp";
+import { MainStack } from "../components/techStack/mainStack";
+import { ToolStack } from "../components/techStack/toolStack";
+import { OtherStack } from "../components/techStack/otherStack";
+import { LinkBtn } from "../components/common/linkBtn";
+import { HomeCompProps } from "../types/types";
 
-export const TechStack = () => {
+export const TechStack = ({ mobHeight, deskHeight }: HomeCompProps) => {
   const [expandMoreBtn, setExpandMoreBtn] = useState<boolean>(false);
   const { colors, isMobile } = useColor();
-  const deskHeight = "500px";
-  const mobHeight = "120vh";
 
   const handleSeeMoreBtn = () => {
     setExpandMoreBtn(true);
@@ -20,36 +18,44 @@ export const TechStack = () => {
   return (
     <div
       id="techstack"
-      className="w-screen"
       style={{
-        color: isMobile ? colors.secondary : colors.primary,
-        height: isMobile ? mobHeight : deskHeight,
-        minHeight: isMobile ? mobHeight : "",
+        backgroundColor: colors.cream,
+        color: isMobile ? colors.blue : colors.cream,
+        height: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
+        width: "100vw",
       }}
     >
-      {/* background decor */}
-      <BgDecorR mdh={deskHeight} h={mobHeight} />
-
-      <div className="flex flex-col h-full items-center justify-center md:flex-row">
-        {/* Header */}
-
-        <Header
-          title="Tech Stack"
-          src={isMobile ? "stack_light" : "stack"}
-          w="40"
+      <div className="h-full flex flex-col items-center justify-center md:flex-row">
+        <div
+          className="flex items-center justify-center"
           style={{
-            color: isMobile ? colors.primary : colors.secondary,
-            height: isMobile ? "470px" : "auto",
-            width: isMobile ? "auto" : "30%",
+            backgroundColor: isMobile ? colors.blue : colors.cream,
+            color: isMobile ? colors.cream : colors.blue,
+            height: isMobile ? "50vh" : "100%",
+            width: isMobile ? "100%" : "33.33%",
           }}
-        />
+        >
+          {/* Header */}
+          <Header
+            title="Tech Stack"
+            src={isMobile ? "stack_light" : "stack"}
+            w="40"
+            style={{
+              color: isMobile ? colors.cream : colors.blue,
+              height: isMobile ? "470px" : "auto",
+              width: isMobile ? "auto" : "30%",
+            }}
+          />
+        </div>
 
         {/* stacks and link to more */}
         <div
-          className="w-screen flex flex-col items-center justify-center gap-10 md:w-2/3"
+          className="w-screen flex flex-col items-center justify-center gap-10"
           style={{
-            color: isMobile ? colors.secondary : colors.primary,
-            height: isMobile ? "50%" : "auto",
+            backgroundColor: isMobile ? colors.cream : colors.blue,
+            color: isMobile ? colors.blue : colors.cream,
+            height: isMobile ? "70vh" : "100%",
+            width: isMobile ? "100%" : "66.66%",
           }}
         >
           <div className="flex flex-col gap-5 md:gap-10">

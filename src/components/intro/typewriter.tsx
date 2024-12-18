@@ -16,7 +16,7 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
     const handleTyping = () => {
       const i = loopNum % dataType.length;
       const fullText = dataType[i];

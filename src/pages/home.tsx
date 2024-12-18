@@ -3,7 +3,7 @@ import { useActiveSection } from "../hooks/activeComp";
 import { scroller } from "../lib/scrollerbar";
 import { About } from "../ui/home/about";
 import { Contact } from "../ui/home/contact";
-import { Hobbies } from "../ui/home/hobbies";
+// import { Hobbies } from "../ui/home/hobbies";
 import { Intro } from "../ui/home/intro";
 import { Navbar } from "../ui/home/navbar";
 import { Projects } from "../ui/home/projects";

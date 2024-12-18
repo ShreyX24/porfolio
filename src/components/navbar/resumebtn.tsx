@@ -3,13 +3,11 @@ import { useColor } from "../../context/colorProvider";
 import { Button } from "../common/button";
 import { Img } from "../common/img";
 import { openInNewTab } from "../../hooks/openInNewTab";
+import { resumeLink } from "../../controlCenter/cc";
 
 export const Resumebtn = () => {
   const [expandBtn, setExpandBtn] = useState(false);
   const { colors, isMobile } = useColor();
-
-  const resumeLink =
-    "https://drive.google.com/file/d/1WV_9-OMQdl0Oa9fLeArouEeL6QFe7s-H/view?usp=sharing";
 
   return (
     <>

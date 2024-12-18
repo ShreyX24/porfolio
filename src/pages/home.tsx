@@ -10,31 +10,54 @@ import { Footer } from "../ui/footer";
 import { ScrollerBar } from "../ui/scrollerBar";
 import { useActiveSection } from "../hooks/activeComp";
 import { scroller } from "../lib/scrollerbar";
+import { ControlCenter } from "../controlCenter/cc";
 
 export const Home: React.FC = () => {
   const activeSection = useActiveSection(scroller.map((item) => item.id));
 
   return (
+    // the control center is located in /controlCenter/cc.ts
     <div className="w-screen min-h-screen flex flex-col">
-      <Navbar mobHeight={70} deskHeight={120} />
-
-      <Intro
-        mobHeight={100}
-        deskHeight={900}
-        occupation_title="Full Stack Developer"
+      <Navbar
+        deskHeight={ControlCenter.componentsProps.navbar.deskHeight}
+        mobHeight={ControlCenter.componentsProps.navbar.mobHeight}
       />
 
-      <About deskHeight={500} mobHeight={100} />
+      <Intro
+        deskHeight={ControlCenter.componentsProps.intro.deskHeight}
+        mobHeight={ControlCenter.componentsProps.intro.mobHeight}
+        occupation_title={ControlCenter.componentsProps.intro.occupation_title}
+      />
 
-      <TechStack deskHeight={500} mobHeight={120} />
+      <About
+        deskHeight={ControlCenter.componentsProps.about.deskHeight}
+        mobHeight={ControlCenter.componentsProps.about.mobHeight}
+      />
 
-      <Projects deskHeight={1000} mobHeight={250} />
+      <TechStack
+        deskHeight={ControlCenter.componentsProps.techstack.deskHeight}
+        mobHeight={ControlCenter.componentsProps.techstack.mobHeight}
+      />
 
-      <Timeline deskHeight={1800} mobHeight={150} />
+      <Projects
+        deskHeight={ControlCenter.componentsProps.projects.deskHeight}
+        mobHeight={ControlCenter.componentsProps.projects.mobHeight}
+      />
 
-      <Contact deskHeight={500} mobHeight={100} />
+      <Timeline
+        deskHeight={ControlCenter.componentsProps.timeline.deskHeight}
+        mobHeight={ControlCenter.componentsProps.timeline.mobHeight}
+      />
 
-      <Footer deskHeight={200} mobHeight={40} />
+      <Contact
+        deskHeight={ControlCenter.componentsProps.contact.deskHeight}
+        mobHeight={ControlCenter.componentsProps.contact.mobHeight}
+      />
+
+      <Footer
+        deskHeight={ControlCenter.componentsProps.footer.deskHeight}
+        mobHeight={ControlCenter.componentsProps.footer.mobHeight}
+      />
 
       <ScrollerBar activeSection={activeSection} />
 

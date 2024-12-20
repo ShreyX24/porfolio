@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Header } from "../components/common/header";
 import { LinkBtn } from "../components/common/linkBtn";
 import { VertScroll } from "../components/timeline/vertScroll";
@@ -6,13 +7,19 @@ import { HomeCompProps } from "../types/types";
 
 export const Timeline = ({ mobHeight, deskHeight }: HomeCompProps) => {
   const { colors, isMobile } = useColor();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div
       id="timeline"
       style={{
         backgroundColor: colors.cream,
         color: isMobile ? colors.blue : colors.cream,
-        height: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
+        height: isMobile ? (isExpanded ? `auto` : `${mobHeight}vh`) : `${deskHeight}px`,
         width: "100vw",
       }}
     >
@@ -26,7 +33,6 @@ export const Timeline = ({ mobHeight, deskHeight }: HomeCompProps) => {
             width: isMobile ? "100%" : "33.33%",
           }}
         >
-          {/* Header */}
           <Header
             title="Timeline"
             src={isMobile ? "timeline_light" : "timeline"}
@@ -39,23 +45,22 @@ export const Timeline = ({ mobHeight, deskHeight }: HomeCompProps) => {
           />
         </div>
         <div
-          className="flex flex-col items-center justify-center gap-10"
+          className="flex flex-col items-center justify-center gap-10 py-10 md:py-0"
           style={{
             backgroundColor: isMobile ? colors.cream : colors.blue,
             color: isMobile ? colors.blue : colors.cream,
-            height: isMobile ? `${mobHeight - 50}vh` : "100%",
+            height: isMobile ? (isExpanded ? 'auto' : `${mobHeight - 50}vh`) : "100%",
             width: isMobile ? "100%" : "66.66%",
           }}
         >
-          <VertScroll />
-          {isMobile ? (
+          <VertScroll isExpanded={isExpanded} />
+          {isMobile && (
             <LinkBtn
-              placeholder="More in Timeline"
+              placeholder={isExpanded ? "Show Less" : "More in Timeline"}
               src={isMobile ? "arrow-right2" : "arrow-right2_light"}
               color="blue"
+              onclick={handleExpand}
             />
-          ) : (
-            <></>
           )}
         </div>
       </div>

@@ -13,7 +13,7 @@ export const Projects = ({ mobHeight, deskHeight }: HomeCompProps) => {
       style={{
         backgroundColor: colors.cream,
         color: isMobile ? colors.blue : colors.cream,
-        minHeight: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
+        height: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
         width: "100vw",
       }}
     >
@@ -34,15 +34,15 @@ export const Projects = ({ mobHeight, deskHeight }: HomeCompProps) => {
             w="40"
             style={{
               color: isMobile ? colors.cream : colors.blue,
-              height: isMobile ? "100%" : "100",
-              width: isMobile ? "100" : "30%",
+              height: isMobile ? "100%" : "100%",
+              width: isMobile ? "100%" : "30%",
             }}
           />
         </div>
 
         {/* projects and link to more */}
         <div
-          className="flex flex-col items-center justify-center gap-10 md:gap-10 py-10"
+          className="flex flex-col items-center justify-center gap-10 md:gap-10"
           style={{
             backgroundColor: isMobile ? colors.cream : colors.blue,
             color: isMobile ? colors.blue : colors.cream,

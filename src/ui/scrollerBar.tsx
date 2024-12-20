@@ -81,7 +81,7 @@ export const ScrollerBar = ({ activeSection }: ScrollerBarProps) => {
   // }, [activeSection]);
 
   return (
-    <div className="w-screen bottom-0 fixed md:w-[40px] md:h-screen md:top-0 md:right-[40px] md:flex md:items-center md:justify-center z-50">
+    <div className="w-screen bottom-0 fixed md:w-[40px] px-5 py-2 md:h-screen md:top-0 md:right-[40px] md:flex md:items-center md:justify-center z-50">
       <div
         className="flex flex-col items-center justify-center py-3 px-2 gap-2 rounded-md md:rounded-full md:py-6 md:flex-row border-[2px]"
         style={{

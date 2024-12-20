@@ -42,8 +42,8 @@ export const TechStack = ({ mobHeight, deskHeight }: HomeCompProps) => {
             w="40"
             style={{
               color: isMobile ? colors.cream : colors.blue,
-              height: isMobile ? "470px" : "auto",
-              width: isMobile ? "auto" : "30%",
+              height: isMobile ? "470px" : "100%",
+              width: "100%",
             }}
           />
         </div>

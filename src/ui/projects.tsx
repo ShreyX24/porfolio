@@ -13,11 +13,11 @@ export const Projects = ({ mobHeight, deskHeight }: HomeCompProps) => {
       style={{
         backgroundColor: colors.cream,
         color: isMobile ? colors.blue : colors.cream,
-        height: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
+        minHeight: isMobile ? `${mobHeight}vh` : `${deskHeight}px`,
         width: "100vw",
       }}
     >
-      <div className="flex flex-col h-full w-full items-center justify-center md:flex-row-reverse ">
+      <div className="flex flex-col h-full w-full items-center justify-center md:flex-row-reverse">
         <div
           className="flex items-center justify-center"
           style={{
@@ -42,7 +42,7 @@ export const Projects = ({ mobHeight, deskHeight }: HomeCompProps) => {
 
         {/* projects and link to more */}
         <div
-          className="flex items-center justify-center gap-10 md:gap-10 flex-col"
+          className="flex flex-col items-center justify-center gap-10 md:gap-10 py-10"
           style={{
             backgroundColor: isMobile ? colors.cream : colors.blue,
             color: isMobile ? colors.blue : colors.cream,

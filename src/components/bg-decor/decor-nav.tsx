@@ -1,7 +1,7 @@
 import { useColor } from "../../context/colorProvider";
 import { BgDecorProps } from "../../types/types";
 
-export const BgDecorR: React.FC<BgDecorProps> = ({ h, mdh }) => {
+export const DecorNav: React.FC<BgDecorProps> = ({ h, mdh }) => {
   const { colors, isMobile } = useColor();
   return (
     <div
@@ -9,15 +9,12 @@ export const BgDecorR: React.FC<BgDecorProps> = ({ h, mdh }) => {
       style={{ height: isMobile ? h : mdh }}
     >
       <div
-        className="w-full absolute -z-10 md:right-0 md:w-2/3"
-        style={{
-          backgroundColor: colors.secondary,
-          height: isMobile ? "470px" : "100%",
-        }}
+        className="h-full w-full absolute -z-10 md:w-2/3"
+        style={{ backgroundColor: colors.blue }}
       ></div>
       <div
         className="h-full w-full absolute -z-20"
-        style={{ backgroundColor: colors.primary }}
+        style={{ backgroundColor: colors.cream }}
       ></div>
     </div>
   );

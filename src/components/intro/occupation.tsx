@@ -1,11 +1,15 @@
-import React from "react";
 import { Slide } from "../../animations/slide";
 
-export const Occupation = () => {
+interface OccupationProps {
+  placeholder: string;
+}
+
+export const Occupation = ({ placeholder }: OccupationProps) => {
   return (
     <Slide animdelay={true}>
-      <span className="text-[20px] font-semibold md:font-normal md:text-[30px] poppins">
-        <span>~</span>Frontend Developer
+      <span className="text-[18px] font-semibold md:font-normal md:text-[30px] poppins">
+        <span>~</span>
+        {placeholder}
       </span>
     </Slide>
   );

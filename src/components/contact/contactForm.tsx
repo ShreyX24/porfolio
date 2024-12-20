@@ -140,7 +140,7 @@ export const ContactForm = () => {
           <div className="flex flex-col gap-5 md:flex-row">
             <label
               htmlFor="name"
-              className="flex items-center justify-start md:w-[250px] font-semibold text-xl roboto md:justify-end"
+              className="flex items-center justify-start w-[90%] md:w-[250px] font-semibold text-xl roboto md:justify-end"
             >
               Name
             </label>
@@ -148,8 +148,8 @@ export const ContactForm = () => {
               className="border-2 flex items-center justify-center p-2"
               style={{
                 borderColor: formFields.name.hasError
-                  ? colors.error
-                  : colors.primary,
+                  ? colors.red
+                  : colors.cream,
               }}
             >
               <input
@@ -159,8 +159,8 @@ export const ContactForm = () => {
                 placeholder="John Doe"
                 className="w-[350px] h-[40px] outline-none p-2 font-semibold md:w-[700px]"
                 style={{
-                  backgroundColor: colors.primary,
-                  color: colors.secondary,
+                  backgroundColor: colors.cream,
+                  color: colors.blue,
                 }}
                 value={formFields.name.value}
                 onChange={(e) => handleInputChange(e, "name")}
@@ -182,8 +182,8 @@ export const ContactForm = () => {
               className="border-2 flex items-center justify-center p-2"
               style={{
                 borderColor: formFields.email.hasError
-                  ? colors.error
-                  : colors.primary,
+                  ? colors.red
+                  : colors.cream,
               }}
             >
               <input
@@ -193,8 +193,8 @@ export const ContactForm = () => {
                 placeholder="JohnDoe@gmail.com"
                 className="w-[350px] h-[40px] outline-none p-2 font-semibold md:w-[700px]"
                 style={{
-                  backgroundColor: colors.primary,
-                  color: colors.secondary,
+                  backgroundColor: colors.cream,
+                  color: colors.blue,
                 }}
                 value={formFields.email.value}
                 onChange={(e) => handleInputChange(e, "email")}
@@ -216,8 +216,8 @@ export const ContactForm = () => {
               className="w-fit border-2 flex items-center justify-center p-2 font-semibold"
               style={{
                 borderColor: formFields.message.hasError
-                  ? colors.error
-                  : colors.primary,
+                  ? colors.red
+                  : colors.cream,
               }}
             >
               <textarea
@@ -230,8 +230,8 @@ export const ContactForm = () => {
                     : "We're looking to design a system for [Company X], and we believe your expertise would be invaluable to the process. We'd love to set up a time for a discussion and get your thoughts on how we can make this a success."
                 }
                 style={{
-                  backgroundColor: colors.primary,
-                  color: colors.secondary,
+                  backgroundColor: colors.cream,
+                  color: colors.blue,
                 }}
                 value={formFields.message.value}
                 onChange={(e) => handleInputChange(e, "message")}

@@ -11,7 +11,7 @@ export const VertScroll = () => {
   return (
     <>
       {isMobile ? (
-        <VerticalTimeline lineColor={colors.primary}>
+        <VerticalTimeline lineColor={colors.cream}>
           {workExpMob.map((item, index) => (
             <VerticalTimelineElement
               key={index}
@@ -47,27 +47,27 @@ export const VertScroll = () => {
           ))}
         </VerticalTimeline>
       ) : (
-        <VerticalTimeline lineColor={colors.primary}>
+        <VerticalTimeline lineColor={colors.cream}>
           {workExpDesk.map((item, index) => (
             <VerticalTimelineElement
               key={index}
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: `${colors.primary}`,
+                background: `${colors.cream}`,
                 color: `${item.cardTextColor}`,
               }}
               contentArrowStyle={{
-                borderRight: `7px solid ${colors.primary}`,
+                borderRight: `7px solid ${colors.cream}`,
               }}
               date={`${item.date}`}
               dateClassName="text-white"
               iconStyle={{
-                background: `${colors.primary}`,
+                background: `${colors.cream}`,
                 color: "#000",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                borderColor: `${colors.primary}`,
+                borderColor: `${colors.cream}`,
               }}
               icon={
                 <img

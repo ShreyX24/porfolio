@@ -22,7 +22,7 @@ export const useActiveSection = (sectionIds: string[]): string | null => {
 
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      rootMargin: "-50% 0px -50% 0px", // Observe when 50% of the element is in view
+      rootMargin: "-20% 0px -50% 0px", // Observe when 50% of the element is in view
       threshold: 0,
     };
 

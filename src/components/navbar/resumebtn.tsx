@@ -3,14 +3,11 @@ import { useColor } from "../../context/colorProvider";
 import { Button } from "../common/button";
 import { Img } from "../common/img";
 import { openInNewTab } from "../../hooks/openInNewTab";
+import { resumeLink } from "../../controlCenter/cc";
 
 export const Resumebtn = () => {
   const [expandBtn, setExpandBtn] = useState(false);
   const { colors, isMobile } = useColor();
-
-  const resumeLink =
-    "https://drive.google.com/file/d/1WV_9-OMQdl0Oa9fLeArouEeL6QFe7s-H/view?usp=sharing";
-
 
   return (
     <>
@@ -18,7 +15,7 @@ export const Resumebtn = () => {
       <div className=" flex items-center justify-center md:w-1/3 z-10">
         <div
           className="flex items-center px-4 py-1 rounded-md cursor-pointer gap-1"
-          style={{ backgroundColor: colors.secondary, color: colors.primary }}
+          style={{ backgroundColor: colors.blue, color: colors.cream }}
           onClick={() => setExpandBtn(!expandBtn)}
         >
           <Button
@@ -41,25 +38,25 @@ export const Resumebtn = () => {
             isMobile
               ? expandBtn
                 ? {
-                    transform: "translateY(140%)",
+                    transform: "translateX(200%)",
                     zIndex: "0",
-                    borderColor: colors.primary,
+                    borderColor: colors.cream,
                   }
                 : {
-                    transform: "translateY(0%)",
+                    transform: "translateX(0%)",
                     zIndex: "-1",
-                    borderColor: colors.primary,
+                    borderColor: colors.cream,
                   }
               : expandBtn
               ? {
                   transform: "translateX(230%)",
                   zIndex: "0",
-                  borderColor: colors.secondary,
+                  borderColor: colors.blue,
                 }
               : {
                   transform: "translateX(0%)",
                   zIndex: "-1",
-                  borderColor: colors.secondary,
+                  borderColor: colors.blue,
                 }
           }
         >

@@ -1,44 +1,68 @@
 import React from "react";
+import { Navbar } from "../ui/navbar";
+import { Intro } from "../ui/intro";
+import { About } from "../ui/about";
+import { TechStack } from "../ui/techStack";
+import { Projects } from "../ui/projects";
+import { Timeline } from "../ui/timeline";
+import { Contact } from "../ui/contact";
+import { Footer } from "../ui/footer";
+import { ScrollerBar } from "../ui/scrollerBar";
 import { useActiveSection } from "../hooks/activeComp";
 import { scroller } from "../lib/scrollerbar";
-import { About } from "../ui/home/about";
-import { Contact } from "../ui/home/contact";
-// import { Hobbies } from "../ui/home/hobbies";
-import { Intro } from "../ui/home/intro";
-import { Navbar } from "../ui/home/navbar";
-import { Projects } from "../ui/home/projects";
-import { ScrollerBar } from "../ui/home/scrollerBar";
-import { TechStack } from "../ui/home/techStack";
-import { Timeline } from "../ui/home/timeline";
-import { Footer } from "../ui/home/footer";
-import { PreventMobileView } from "../ui/home/preventMobileView";
+import { ControlCenter } from "../controlCenter/cc";
 
 export const Home: React.FC = () => {
   const activeSection = useActiveSection(scroller.map((item) => item.id));
 
   return (
-    <div className="w-screen h-screen">
-      <Navbar />
+    // the control center is located in /controlCenter/cc.ts
+    <div className="w-screen min-h-screen flex flex-col">
+      <Navbar
+        deskHeight={ControlCenter.componentsProps.navbar.deskHeight}
+        mobHeight={ControlCenter.componentsProps.navbar.mobHeight}
+      />
 
-      <Intro />
+      <Intro
+        deskHeight={ControlCenter.componentsProps.intro.deskHeight}
+        mobHeight={ControlCenter.componentsProps.intro.mobHeight}
+        occupation_title={ControlCenter.componentsProps.intro.occupation_title}
+      />
 
-      <About />
+      <About
+        deskHeight={ControlCenter.componentsProps.about.deskHeight}
+        mobHeight={ControlCenter.componentsProps.about.mobHeight}
+      />
 
-      <TechStack />
+      <TechStack
+        deskHeight={ControlCenter.componentsProps.techstack.deskHeight}
+        mobHeight={ControlCenter.componentsProps.techstack.mobHeight}
+      />
 
-      <Projects />
+      <Projects
+        deskHeight={ControlCenter.componentsProps.projects.deskHeight}
+        mobHeight={ControlCenter.componentsProps.projects.mobHeight}
+      />
 
-      <Timeline />
+      <Timeline
+        deskHeight={ControlCenter.componentsProps.timeline.deskHeight}
+        mobHeight={ControlCenter.componentsProps.timeline.mobHeight}
+      />
 
-      {/* <Hobbies /> */}
+      <Contact
+        deskHeight={ControlCenter.componentsProps.contact.deskHeight}
+        mobHeight={ControlCenter.componentsProps.contact.mobHeight}
+      />
 
-      <Contact />
-
-      <Footer />
+      <Footer
+        deskHeight={ControlCenter.componentsProps.footer.deskHeight}
+        mobHeight={ControlCenter.componentsProps.footer.mobHeight}
+      />
 
       <ScrollerBar activeSection={activeSection} />
 
-      <PreventMobileView />
+      {/* <Hobbies /> */}
+      {/* <PreventMobileView /> */}
     </div>
   );
 };

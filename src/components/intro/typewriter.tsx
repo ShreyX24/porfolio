@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { TypewriterProps } from "../../types/types";
 import { Slide } from "../../animations/slide";
+
+interface TypewriterProps {
+  dataType: string[];
+  dataPeriod: number;
+}
 
 export const Typewriter: React.FC<TypewriterProps> = ({
   dataType,
@@ -12,7 +16,7 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
     const handleTyping = () => {
       const i = loopNum % dataType.length;
       const fullText = dataType[i];

@@ -72,10 +72,6 @@ export const toolStack: btnLib[] = [
         img: "github"
     },
     {
-        name: "GCP",
-        img: "gcp"
-    },
-    {
         name: "VS Code",
         img: "vscode"
     }

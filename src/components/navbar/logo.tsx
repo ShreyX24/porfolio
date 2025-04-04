@@ -1,24 +1,8 @@
-import { PopUp } from "../../animations/popUp";
-import { useColor } from "../../context/colorProvider";
-
 export const Logo = () => {
-  const { colors } = useColor();
   return (
-    <div
-      className="w-full md:w-1/3 flex items-center justify-center"
-      style={{ color: colors.cream }}
-    >
-      <div className="flex items-center justify-center p-2 text-3xl md:p-4 md:text-5xl roboto">
-        <PopUp>
-          <span>shrey</span>
-          <span style={{ color: colors.orange }}>.</span>
-          <span>dev</span>
-        </PopUp>
-        <PopUp>
-          <span style={{ color: colors.orange }}>.</span>
-          <span style={{ color: colors.cyan }}>_</span>
-        </PopUp>
-      </div>
+    <div className="flex h-full items-center justify-center">
+      <span className="tourney-300 top-[40px] text-8xl">S</span>
+      <span className="font-logo-1 font text-7xl font-normal">T</span>
     </div>
   );
 };

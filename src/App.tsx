@@ -1,16 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import "./App.css";
-import { router } from "./routes/router";
-import { ColorProvider } from "./context/colorProvider";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/routes';
 
-function App() {
+export const App = () => {
   return (
     <>
-      <ColorProvider>
-        <RouterProvider router={router} />
-      </ColorProvider>
+      <RouterProvider router={router} />
     </>
   );
-}
-
-export default App;
+};

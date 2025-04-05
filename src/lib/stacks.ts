@@ -2,7 +2,40 @@ export type StackType = {
   name: string;
   img: string;
 };
-
+export const dailyStack: StackType[] = [
+  {
+    name: 'A.I.',
+    img: 'ai',
+  },
+  {
+    name: 'Game Testing',
+    img: 'game_testing',
+  },
+  {
+    name: 'Planning',
+    img: 'planning',
+  },
+  {
+    name: 'Validation',
+    img: 'validation',
+  },
+  {
+    name: 'CPU Architecture',
+    img: 'cpu_architecture',
+  },
+  {
+    name: 'CPU',
+    img: 'intel_cpu',
+  },
+  {
+    name: 'GPU',
+    img: 'gpu',
+  },
+  {
+    name: 'Excel',
+    img: 'excel',
+  },
+];
 export const frontStack: StackType[] = [
   {
     name: 'React',

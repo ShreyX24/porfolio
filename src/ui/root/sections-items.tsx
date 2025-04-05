@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { AboutMe } from '../sections/about-me';
 import { TechStack } from '../sections/tech-stack';

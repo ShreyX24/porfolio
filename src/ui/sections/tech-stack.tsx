@@ -32,7 +32,7 @@ export const TechStack = () => {
           {/* First card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0}
+            delay={0.1}
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"
@@ -50,7 +50,7 @@ export const TechStack = () => {
           {/* Second card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0}
+            delay={0.2}
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"
@@ -68,7 +68,7 @@ export const TechStack = () => {
           {/* Third card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0.2} // Staggered delay for second card
+            delay={0.3} // Staggered delay for second card
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"
@@ -86,7 +86,7 @@ export const TechStack = () => {
           {/* Fourth card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0.4} // Staggered delay for third card
+            delay={0.5} // Staggered delay for third card
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"
@@ -104,7 +104,7 @@ export const TechStack = () => {
           {/* Fifth card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0}
+            delay={0.6}
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"
@@ -122,7 +122,7 @@ export const TechStack = () => {
           {/* Sixth card with animation */}
           <AnimatedComponent
             type="slide-up"
-            delay={0}
+            delay={0.7}
             duration={0.5}
             animateWhenInView={true}
             className="size-[400px]"

@@ -18,15 +18,7 @@ export const SectionsItems = ({
   indicator_style = 'square_rounded',
 }: SectionsItemsProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  // Initialize state from localStorage or default to 0
-  const [currentSection, setCurrentSection] = useState(() => {
-    // Only access localStorage during client-side rendering
-    if (typeof window !== 'undefined') {
-      const savedSection = localStorage.getItem('currentSection');
-      return savedSection ? parseInt(savedSection, 10) : 0;
-    }
-    return 0;
-  });
+  const [currentSection, setCurrentSection] = useState(0);
 
   // Define all sections in an array for easy navigation
   const sections = [
@@ -84,11 +76,6 @@ export const SectionsItems = ({
     circle: '100',
   };
 
-  // Update localStorage when currentSection changes
-  useEffect(() => {
-    localStorage.setItem('currentSection', currentSection.toString());
-  }, [currentSection]);
-
   // Navigate to previous section
   const goToPrevSection = () => {
     if (currentSection > 0) {
@@ -117,7 +104,7 @@ export const SectionsItems = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentSection]);
 
-  // Scroll to the current section when it changes or component mounts
+  // Scroll to the current section when it changes
   useEffect(() => {
     if (containerRef.current) {
       const sectionElements = containerRef.current.children;
@@ -189,9 +176,10 @@ export const SectionsItems = ({
       {/* Section indicator */}
       <div className="fixed bottom-6 left-1/2 z-20 flex w-full -translate-x-1/2 items-center justify-center gap-5">
         {sections.map((section, index) => (
-          <div key={section.id} className="relative flex">
+          <div className="relative flex">
             <BtnBgShadow borderRadius={BtnBgShadowRadius[indicator_style]} />
             <button
+              key={section.id}
               onClick={() => setCurrentSection(index)}
               className={`border-border flex cursor-pointer items-center justify-center gap-1 font-bold transition-all hover:-translate-x-[1px] hover:-translate-y-[1px] ${borderRadiusStyles[indicator_style]} relative border-2 ${index === currentSection ? `${section.btn_color} ${section.text_color} translate-x-[1.5px] translate-y-[1.5px] px-4 py-1 hover:translate-x-[1.5px] hover:translate-y-[1.5px] active:translate-x-[1.5px] active:translate-y-[1.5px]` : 'bg-card-background p-[2px]'}`}
               aria-label={`Go to ${section.id} section`}

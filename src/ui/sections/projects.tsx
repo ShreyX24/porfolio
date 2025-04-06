@@ -1,10 +1,11 @@
 import { AnimatedComponent } from '../../animations/animations';
+import { RouterAnimation } from '../../animations/router-animation';
 import { Cards } from '../../components/custom/cards/cards';
 import { ProjectCards } from '../../components/custom/cards/projectCards';
 
 export const Projects = () => {
   return (
-    <div className="flex h-full w-screen items-center justify-center">
+    <RouterAnimation>
       <div className="flex h-full w-full items-center justify-center">
         {/* wrapper div */}
         <div className="flex h-[70%] w-[70%] flex-wrap items-start justify-center gap-10">
@@ -22,6 +23,6 @@ export const Projects = () => {
           </AnimatedComponent>
         </div>
       </div>
-    </div>
+    </RouterAnimation>
   );
 };

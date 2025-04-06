@@ -185,13 +185,15 @@ export const Root = ({ indicator_style = 'square_rounded' }: RootProps) => {
             <BtnBgShadow borderRadius={BtnBgShadowRadius[indicator_style]} />
             <Link
               to={section.path}
-              className={`border-border flex cursor-pointer items-center justify-center gap-1 font-bold transition-all hover:-translate-x-[1px] hover:-translate-y-[1px] ${borderRadiusStyles[indicator_style]} relative border-2 ${index === currentSectionIndex ? `${section.btn_color} ${section.text_color} translate-x-[1.5px] translate-y-[1.5px] px-4 py-1 hover:translate-x-[1.5px] hover:translate-y-[1.5px] active:translate-x-[1.5px] active:translate-y-[1.5px]` : 'bg-card-background p-[2px]'}`}
+              className={`border-border flex cursor-pointer items-center justify-center gap-[6px] font-bold transition-all hover:-translate-x-[1px] hover:-translate-y-[1px] ${borderRadiusStyles[indicator_style]} relative border-2 ${index === currentSectionIndex ? `${section.btn_color} ${section.text_color} translate-x-[1.5px] translate-y-[1.5px] px-4 py-1 hover:translate-x-[1.5px] hover:translate-y-[1.5px] active:translate-x-[1.5px] active:translate-y-[1.5px]` : 'bg-card-background p-[2px]'}`}
               aria-label={`Go to ${section.id} section`}
             >
               {index === currentSectionIndex ? (
                 <>
                   {section.img}
-                  <span className='font-extrabold uppercase font-mono'>{section.name}</span>
+                  <span className="font-mono font-extrabold uppercase text-shadow-xs/20">
+                    {section.name}
+                  </span>
                 </>
               ) : (
                 section.img

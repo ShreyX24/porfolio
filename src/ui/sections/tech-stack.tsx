@@ -16,6 +16,7 @@ import { IoToday } from 'react-icons/io5';
 import { RiToolsFill } from 'react-icons/ri';
 import { BsMotherboardFill } from 'react-icons/bs';
 import { RouterAnimation } from '../../animations/router-animation';
+import { Checkbox } from '../../components/custom/checkbox/checkbox';
 
 export const TechStack = () => {
   const [frontEndPinned, setFrontEndPinned] = useState(false);
@@ -28,8 +29,14 @@ export const TechStack = () => {
   return (
     <RouterAnimation className="bg-background-p2">
       <div className="flex h-screen w-screen items-center justify-center">
-        <div className="flex h-full w-full items-center justify-center">
-          {/* wrapper div */}
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          {/* Unpin all */}
+          <div className="flex items-center justify-start w-[70%] p-8 gap-2">
+            <Checkbox />
+            <span className="font-bold">Pin All</span>
+          </div>
+
+          {/* stack wrapper div */}
           <div className="flex h-[70%] w-[70%] flex-wrap items-start justify-center gap-10">
             {/* First card with animation */}
             <AnimatedComponent

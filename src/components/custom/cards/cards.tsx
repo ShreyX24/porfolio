@@ -24,7 +24,7 @@ export const Cards = ({
   };
   const borderWidthStyles = {
     square: 'border-4',
-    square_rounded: 'border-4',
+    square_rounded: 'border-[3px]',
     circle: 'border-2 ',
   };
 
@@ -37,11 +37,11 @@ export const Cards = ({
   return (
     <div className={`relative size-[${size}px]`}>
       <BtnBgShadow
-        translate="4"
+        translate="2"
         borderRadius={shadowBorderRadius[card_style]}
       />
       <div
-        className={`${className} ${borderRadiusStyles[card_style]} ${borderWidthStyles[card_style]} bg-background-p1 relative z-10 size-full border-gray-900 font-bold transition-all outline-none hover:-translate-x-[2px] hover:-translate-y-[2px] ${isPinned ? '' : '-translate-x-[1.5px] -translate-y-[1.5px]'}`}
+        className={`${className} ${borderRadiusStyles[card_style]} ${borderWidthStyles[card_style]} bg-background-p1 relative z-10 size-full border-gray-900 font-bold transition-all outline-none hover:-translate-x-[4px] hover:-translate-y-[4px] ${isPinned ? 'hover:translate-x-[2px] hover:translate-y-[2px] translate-x-[2px] translate-y-[2px]' : '-translate-x-[3px] -translate-y-[3px]'}`}
       >
         {children}
       </div>

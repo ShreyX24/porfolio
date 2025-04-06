@@ -1,11 +1,13 @@
 interface BtnBgShadowProps {
   borderRadius?: string;
   translate?: '0' | '1' | '2' | '4' | '6';
+  className?: string;
 }
 
 export const BtnBgShadow = ({
   borderRadius = '3',
   translate = '2',
+  className,
 }: BtnBgShadowProps) => {
   // Map different border radius values to specific Tailwind classes
   const radiusClasses = {
@@ -31,7 +33,7 @@ export const BtnBgShadow = ({
 
   return (
     <div
-      className={`${translateClass[translate]} absolute inset-0 h-full w-full ${radiusClass} bg-black`}
+      className={`${translateClass[translate]} absolute inset-0 h-full w-full ${radiusClass} bg-black ${className}`}
     ></div>
   );
 };

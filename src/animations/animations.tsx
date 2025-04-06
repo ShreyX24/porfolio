@@ -216,7 +216,7 @@ export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
             width,
             height,
             position: 'relative',
-            overflow: 'hidden',
+            
           }}
           variants={variants}
           initial="hidden"
@@ -245,7 +245,7 @@ export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
         width,
         height,
         position: 'relative',
-        overflow: 'hidden',
+        
       }}
     >
       <motion.div

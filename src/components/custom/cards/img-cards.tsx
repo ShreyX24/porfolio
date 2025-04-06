@@ -35,7 +35,7 @@ export const ImgCards = ({ card_style = 'square_rounded' }: ImgCardsProps) => {
         <img
           src="/images/shrey.jpg"
           alt="Profile"
-          className={`relative h-full w-[300px] object-contain`}
+          className={`relative h-full w-[400px] object-contain`}
         />
       </div>
     </div>

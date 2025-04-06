@@ -85,9 +85,11 @@ export const StackCards = ({
             transition={{ duration: 0.3 }}
           >
             {/* top div */}
-            <div className="flex h-[70px] w-full items-center justify-between border-b-2 border-black">
+            <div className="flex h-[70px] w-full items-center justify-between border-b-2 border-black px-4">
               {/* card header */}
-              <span className="px-4 text-lg">{card_header}</span>
+              <span className="-rotate-2 transform bg-lime-300 p-2 px-4 text-lg font-black">
+                {card_header}
+              </span>
               {/* pin button */}
               <div className="px-4">
                 <Button

@@ -3,7 +3,7 @@ import { BtnBgShadow } from "../buttons/btn-bg-shadow";
 export const Checkbox = () => {
   return (
     <div className="relative inline-block h-5 w-5">
-      <BtnBgShadow/>
+      <BtnBgShadow translate="4"/>
       <input
         id="remember-me"
         type="checkbox"

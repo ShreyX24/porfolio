@@ -10,6 +10,7 @@ interface CardsProps {
 
 export const Cards = ({
   card_style = 'square_rounded',
+
   children,
   className,
   isPinned = false,
@@ -40,7 +41,7 @@ export const Cards = ({
         borderRadius={shadowBorderRadius[card_style]}
       />
       <div
-        className={`${className} ${borderRadiusStyles[card_style]} ${borderWidthStyles[card_style]} bg-background relative z-10 size-full border-gray-900 font-bold transition-all outline-none hover:-translate-x-[2px] hover:-translate-y-[2px] ${isPinned ? '' : '-translate-x-[1.5px] -translate-y-[1.5px]'}`}
+        className={`${className} ${borderRadiusStyles[card_style]} ${borderWidthStyles[card_style]} bg-background-p1 relative z-10 size-full border-gray-900 font-bold transition-all outline-none hover:-translate-x-[2px] hover:-translate-y-[2px] ${isPinned ? '' : '-translate-x-[1.5px] -translate-y-[1.5px]'}`}
       >
         {children}
       </div>

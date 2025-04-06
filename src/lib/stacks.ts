@@ -38,7 +38,7 @@ export const dailyStack: StackType[] = [
 ];
 export const frontStack: StackType[] = [
   {
-    name: 'React',
+    name: 'React.js',
     img: 'react',
   },
   {

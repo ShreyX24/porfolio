@@ -6,7 +6,7 @@ import { Checkbox } from '../../components/custom/checkbox/checkbox';
 import { Input } from '../../components/custom/inputs/input';
 export const ContactMe = () => {
   return (
-    <RouterAnimation>
+    <RouterAnimation className="bg-background-p5">
       <div className="flex h-full w-full flex-col items-center justify-center gap-2">
         Contact
         <Button

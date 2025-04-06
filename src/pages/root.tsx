@@ -22,31 +22,31 @@ export const Root = ({ indicator_style = 'square_rounded' }: RootProps) => {
       path: '/about',
       name: 'About',
       img: <FaInfoCircle className="text-[18px]" />,
-      btn_color: 'bg-button-yellow',
-      text_color: 'text-foreground',
+      btn_color: 'bg-button-red',
+      text_color: 'text-background',
     },
     {
       id: 'tech',
       path: '/tech',
-      name: 'Tech Stack',
+      name: 'Tech-Stack',
       img: <GrTechnology className="text-[18px]" />,
-      btn_color: 'bg-button-blue',
-      text_color: 'text-background',
+      btn_color: 'bg-button-yellow',
+      text_color: 'text-foreground',
     },
     {
       id: 'projects',
       path: '/projects',
       name: 'Projects',
       img: <GrAppsRounded className="text-[18px]" />,
-      btn_color: 'bg-button-green',
-      text_color: 'text-foreground',
+      btn_color: 'bg-button-purple',
+      text_color: 'text-background',
     },
     {
       id: 'timeline',
       path: '/timeline',
       name: 'Timeline',
       img: <FaTimeline className="text-[18px]" />,
-      btn_color: 'bg-button-red',
+      btn_color: 'bg-button-blue',
       text_color: 'text-background',
     },
     {
@@ -54,8 +54,8 @@ export const Root = ({ indicator_style = 'square_rounded' }: RootProps) => {
       path: '/contact',
       name: 'Contact',
       img: <GrContactInfo className="text-[18px]" />,
-      btn_color: 'bg-button-purple',
-      text_color: 'text-background',
+      btn_color: 'bg-button-green',
+      text_color: 'text-foreground',
     },
   ];
 
@@ -190,7 +190,8 @@ export const Root = ({ indicator_style = 'square_rounded' }: RootProps) => {
             >
               {index === currentSectionIndex ? (
                 <>
-                  {section.img} {section.name}
+                  {section.img}
+                  <span className='font-extrabold uppercase font-mono'>{section.name}</span>
                 </>
               ) : (
                 section.img
@@ -201,7 +202,7 @@ export const Root = ({ indicator_style = 'square_rounded' }: RootProps) => {
       </div>
 
       {/* Content area using React Router's Outlet */}
-      <div className="bg-background relative h-screen w-screen">
+      <div className="relative h-screen w-screen">
         <AnimatePresence initial={false}>
           <Outlet />
         </AnimatePresence>

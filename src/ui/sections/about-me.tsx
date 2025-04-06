@@ -4,7 +4,7 @@ import { Typewriter } from '../../components/custom/typewriter';
 
 export const AboutMe = () => {
   return (
-    <RouterAnimation>
+    <RouterAnimation className="bg-background">
       <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden text-start">
         <div className="flex flex-col items-start justify-center gap-5">
           <div className="flex items-center justify-center gap-10">

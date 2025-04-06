@@ -26,7 +26,7 @@ export const TechStack = () => {
   const [dailyPinned, setDailyPinned] = useState(false);
 
   return (
-    <RouterAnimation>
+    <RouterAnimation className="bg-background-p2">
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="flex h-full w-full items-center justify-center">
           {/* wrapper div */}
@@ -43,7 +43,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={dailyStack}
                   card_header="Current & Daily"
-                  icon_comp={<IoToday className="size-7" />}
+                  icon_comp={<IoToday className="size-5" />}
                   onPinChange={setDailyPinned}
                 />
               </Cards>
@@ -61,7 +61,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={frontStack}
                   card_header="Frontend"
-                  icon_comp={<CgWebsite className="size-7" />}
+                  icon_comp={<CgWebsite className="size-5" />}
                   onPinChange={setFrontEndPinned}
                 />
               </Cards>
@@ -79,7 +79,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={backStack}
                   card_header="Backend"
-                  icon_comp={<FaCodeBranch className="size-7" />}
+                  icon_comp={<FaCodeBranch className="size-5" />}
                   onPinChange={setBackEndPinned}
                 />
               </Cards>
@@ -97,7 +97,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={dbStack}
                   card_header="Database"
-                  icon_comp={<CgDatabase className="size-7" />}
+                  icon_comp={<CgDatabase className="size-5" />}
                   onPinChange={setDbPinned}
                 />
               </Cards>
@@ -115,7 +115,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={toolStack}
                   card_header="Tools"
-                  icon_comp={<RiToolsFill className="size-7" />}
+                  icon_comp={<RiToolsFill className="size-5" />}
                   onPinChange={setToolPinned}
                 />
               </Cards>
@@ -133,7 +133,7 @@ export const TechStack = () => {
                 <StackCards
                   stack={miscStack}
                   card_header="Others..."
-                  icon_comp={<BsMotherboardFill className="size-7" />}
+                  icon_comp={<BsMotherboardFill className="size-5" />}
                   onPinChange={setMiscPinned}
                 />
               </Cards>

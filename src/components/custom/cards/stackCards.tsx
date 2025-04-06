@@ -69,7 +69,7 @@ export const StackCards = ({
 
   return (
     <div
-      className="flex h-full w-full items-center justify-center overflow-hidden"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden"
       onMouseEnter={handleHoveredOn}
       onMouseLeave={handleHoveredOff}
     >
@@ -87,7 +87,7 @@ export const StackCards = ({
             {/* top div */}
             <div className="flex h-[70px] w-full items-center justify-between border-b-2 border-black">
               {/* card header */}
-              <span className="px-4">{card_header}</span>
+              <span className="px-4 text-lg">{card_header}</span>
               {/* pin button */}
               <div className="px-4">
                 <Button
@@ -131,7 +131,7 @@ export const StackCards = ({
         ) : (
           <motion.div
             key="header"
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 px-8"
             variants={headerVariants}
             initial="hidden"
             animate="visible"
@@ -139,7 +139,9 @@ export const StackCards = ({
             transition={{ duration: 0.3 }}
           >
             {icon_comp}
-            <span className="text-xl">{card_header}</span>
+            <span className="font-main text-2xl uppercase text-shadow-sm/20">
+              {card_header}
+            </span>
           </motion.div>
         )}
       </AnimatePresence>

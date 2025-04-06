@@ -5,7 +5,7 @@ import { ProjectCards } from '../../components/custom/cards/projectCards';
 
 export const Projects = () => {
   return (
-    <RouterAnimation>
+    <RouterAnimation className="bg-background-p3">
       <div className="flex h-full w-full items-center justify-center">
         {/* wrapper div */}
         <div className="flex h-[70%] w-[70%] flex-wrap items-start justify-center gap-10">

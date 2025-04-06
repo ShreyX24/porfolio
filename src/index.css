@@ -43,6 +43,11 @@
 @layer base {
   :root {
     --background: #fffbeb;
+    --background-p1: #89ddd6;
+    --background-p2: #899bdd;
+    --background-p3: #4fb39c;
+    --background-p4: #ec8385;
+    --background-p5: #99a75d;
     --foreground: #111827;
     --card-background: #fef3c7;
     --card-foreground: #111827;
@@ -75,6 +80,12 @@
 
   /** Colors */
   --color-background: #fff5cb;
+  --color-background-p1: #89ddd6;
+  --color-background-p2: #899bdd;
+  --color-background-p3: #4fb39c;
+  --color-background-p4: #ec8385;
+  --color-background-p5: #99a75d;
+
   --color-foreground: #111827;
   --color-card-background: #fef3c7;
   --color-card-foreground: #111827;

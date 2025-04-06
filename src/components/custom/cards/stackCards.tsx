@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { StackType } from '../../../lib/stacks';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedItem } from '../../../animations/animations';
+import { RiUnpinLine } from 'react-icons/ri';
 
 interface StackCardsProps {
   stack: StackType[];
@@ -90,8 +91,15 @@ export const StackCards = ({
               {/* pin button */}
               <div className="px-4">
                 <Button
+                  btn_color="green"
                   placeholder=""
-                  icon_comp={<TbPin className="size-5" />}
+                  icon_comp={
+                    pinClicked ? (
+                      <RiUnpinLine className="size-5" />
+                    ) : (
+                      <TbPin className="size-5" />
+                    )
+                  }
                   onClick={handlePinClick}
                   className={
                     pinClicked ? 'translate-x-[2px] translate-y-[2px]' : ''

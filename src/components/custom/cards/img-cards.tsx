@@ -33,7 +33,7 @@ export const ImgCards = ({ card_style = 'square_rounded' }: ImgCardsProps) => {
         className={`${borderRadiusStyles[card_style]} ${borderRadiusStyles[card_style]} ${borderWidthStyles[card_style]} relative z-10 flex items-center gap-1 border-gray-900 font-bold transition-all outline-none`}
       >
         <img
-          src="/shrey.jpg"
+          src="/images/shrey.jpg"
           alt="Profile"
           className={`relative h-full w-[300px] object-contain`}
         />

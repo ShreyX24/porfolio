@@ -23,7 +23,7 @@ export const AboutMe = () => {
                     👋 Hey there, my name is{' '}
                     <div className="relative flex">
                       <BtnBgShadow className='rotate-2 transform' translate='4'/>
-                      <strong className="text-background bg-header-purple font-archivo relative rotate-2 transform px-2 pt-[6px] text-xl">
+                      <strong className="text-background bg-header-purple font-archivo relative rotate-2 transform px-2 pt-[6px] text-xl rounded-[3px]">
                         Shreyansh
                       </strong>
                     </div>

@@ -25,19 +25,22 @@ export const TechStack = () => {
   const [miscPinned, setMiscPinned] = useState(false);
   const [toolPinned, setToolPinned] = useState(false);
   const [dailyPinned, setDailyPinned] = useState(false);
+  const [allPinned, setAllPinned] = useState(false);
 
   return (
     <RouterAnimation className="bg-background-p2">
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="flex h-full w-full flex-col items-center justify-center">
           {/* Unpin all */}
-          <div className="flex items-center justify-start w-[70%] p-8 gap-2">
-            <Checkbox />
-            <span className="font-bold">Pin All</span>
+          <div className="flex w-[70%] items-center justify-start gap-2 py-8">
+            <Checkbox setChecked={setAllPinned} />
+            <span className="text-sm font-bold">
+              {allPinned ? <>Unpin All</> : <>Pin All</>}
+            </span>
           </div>
 
           {/* stack wrapper div */}
-          <div className="flex h-[70%] w-[70%] flex-wrap items-start justify-center gap-10">
+          <div className="flex h-[70%] w-[70%] flex-wrap items-start gap-10">
             {/* First card with animation */}
             <AnimatedComponent
               type="slide-up"
@@ -48,9 +51,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={dailyPinned} size="400">
                 <StackCards
+                  allPinned={allPinned}
                   stack={dailyStack}
                   card_header="Current & Daily"
-                  icon_comp={<IoToday className="size-5" />}
+                  icon_comp={<IoToday className="size-10" />}
                   onPinChange={setDailyPinned}
                 />
               </Cards>
@@ -66,9 +70,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={frontEndPinned}>
                 <StackCards
+                  allPinned={allPinned}
                   stack={frontStack}
                   card_header="Frontend"
-                  icon_comp={<CgWebsite className="size-5" />}
+                  icon_comp={<CgWebsite className="size-10" />}
                   onPinChange={setFrontEndPinned}
                 />
               </Cards>
@@ -84,9 +89,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={backEndPinned}>
                 <StackCards
+                  allPinned={allPinned}
                   stack={backStack}
                   card_header="Backend"
-                  icon_comp={<FaCodeBranch className="size-5" />}
+                  icon_comp={<FaCodeBranch className="size-10" />}
                   onPinChange={setBackEndPinned}
                 />
               </Cards>
@@ -102,9 +108,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={dbPinned}>
                 <StackCards
+                  allPinned={allPinned}
                   stack={dbStack}
                   card_header="Database"
-                  icon_comp={<CgDatabase className="size-5" />}
+                  icon_comp={<CgDatabase className="size-10" />}
                   onPinChange={setDbPinned}
                 />
               </Cards>
@@ -120,9 +127,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={toolPinned}>
                 <StackCards
+                  allPinned={allPinned}
                   stack={toolStack}
                   card_header="Tools"
-                  icon_comp={<RiToolsFill className="size-5" />}
+                  icon_comp={<RiToolsFill className="size-10" />}
                   onPinChange={setToolPinned}
                 />
               </Cards>
@@ -138,9 +146,10 @@ export const TechStack = () => {
             >
               <Cards isPinned={miscPinned}>
                 <StackCards
+                  allPinned={allPinned}
                   stack={miscStack}
-                  card_header="Others..."
-                  icon_comp={<BsMotherboardFill className="size-5" />}
+                  card_header="Others"
+                  icon_comp={<BsMotherboardFill className="size-10" />}
                   onPinChange={setMiscPinned}
                 />
               </Cards>

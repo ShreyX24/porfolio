@@ -1,6 +1,6 @@
 import { TbPin } from 'react-icons/tb';
 import { Button } from '../buttons/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StackType } from '../../../lib/stacks';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedItem } from '../../../animations/animations';
@@ -11,6 +11,7 @@ interface StackCardsProps {
   card_header: string;
   icon_comp: React.ReactNode;
   onPinChange?: (isPinned: boolean) => void;
+  allPinned: boolean;
 }
 
 export const StackCards = ({
@@ -18,6 +19,7 @@ export const StackCards = ({
   card_header,
   icon_comp,
   onPinChange,
+  allPinned,
 }: StackCardsProps) => {
   const [divHovered, setDivHovered] = useState<boolean>(false);
   const [pinClicked, setPinClicked] = useState<boolean>(false);
@@ -51,6 +53,10 @@ export const StackCards = ({
       setDivHovered(true);
     }
   };
+
+  useEffect(() => {
+    setPinClicked(allPinned);
+  }, [allPinned]);
 
   const showContent = divHovered || pinClicked;
 
@@ -133,7 +139,7 @@ export const StackCards = ({
         ) : (
           <motion.div
             key="header"
-            className="flex items-center justify-center gap-2 px-8"
+            className="flex h-full flex-col items-start justify-center gap-2 p-8"
             variants={headerVariants}
             initial="hidden"
             animate="visible"
@@ -141,7 +147,7 @@ export const StackCards = ({
             transition={{ duration: 0.3 }}
           >
             {icon_comp}
-            <span className="font-main text-2xl uppercase text-shadow-sm/20">
+            <span className="font-main h-full w-[70px] text-4xl text-wrap break-words uppercase text-shadow-sm/20">
               {card_header}
             </span>
           </motion.div>

@@ -17,7 +17,7 @@ export const Projects = () => {
             animateWhenInView={true}
             className="size-[400px]"
           >
-            <Cards size="500">
+            <Cards size="600">
               <ProjectCards />
             </Cards>
           </AnimatedComponent>
